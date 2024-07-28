@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.5s;
+  background: linear-gradient(to bottom, lightgray, black);
+}
+
+.navbar {
+  background-color: #333; /* Set a distinct background color */
+  padding: 20px;
+  position: fixed; /* Change to fixed position */
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  z-index: 1000; /* Ensure the nav bar is above other content */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list li a {
+  color: lightgray; /* Adjust the link color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #ff6600; /* Adjust the hover color */
+}
+
+/* Center the button horizontally and vertically within the hero-content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 0; /* Adjust the margin-top value to minimize the space */
+}
+
+button {
+  max-width: 320px;
+  display: flex;
+  padding: 1rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  gap: 0.75rem;
+  color: rgb(65, 63, 63);
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .6s ease;
+}
+
+.button svg {
+  height: 24px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+
+/* Apply parallax effect to the hero section background */
+.hero {
+  background-image: url('hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  position: relative; /* Add relative positioning for parallax effect */
+}
+
+/* Apply parallax effect to the hero background image */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  z-index: -1;
+  transform: translateZ(-1px) scale(1.2); /* Adjust the scale value for effect */
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-size: 4rem; /* Increase font size */
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(1, 1, 1, 1); /* Add shadow */
+}
+
+.hero p {
+  font-size: 2rem; /* Increase font size */
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(1, 1, 1, 1); /* Add shadow */
+}
+
+.slideshow-content {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slides-container {
+  display: flex;
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  58.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+  91.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 60%;
+  padding: 0 5px;
+  box-sizing: border-box;
+  height: 600px; /* Set a fixed height for all slides */
+}
+
+.slide img {
+  width: 80%;
+  height: 80%; 
+  object-fit: cover; /* Ensure the entire image is visible within the fixed height */
+}
+
+.footer {
+  border-top: 1px solid #444;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 30px 0; /* Adjust padding for more spacing */
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.2); /* Add shadow to the top */
+}
+
+
+.BITSBids-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  border-top: 2px solid #ff6600;
+}
+
+/* Apply custom scrollbar styling */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+

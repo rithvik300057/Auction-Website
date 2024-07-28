@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITSBids - User</title>
+    <link rel="stylesheet" href="User.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="BidLoggedIn.html">Home</a></li>
+                <li><a href="Buy.html">Buy</a></li>
+                <li><a href="Sell.html">Sell</a></li>
+                <li><a href="User.html">User</a></li>
+                <li><a href="Contact.html">Chat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="user">
+        <h1>User Profile</h1>
+        <form id="user-form">
+            <div class="form-group">
+                <label for="user-name">User Name:</label>
+                <input type="text" id="user-name" name="uname" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="user-batch">User Batch:</label>
+                <input type="number" id="user-batch" name="uage" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="user-email">User Email:</label>
+                <input type="email" id="user-email" name="uemail" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="user-contact">User Contact:</label>
+                <input type="tel" id="user-contact" name="ucontact" pattern="[0-9]{10}" required>
+            </div>
+        
+            <button id="create-user-btn" type="submit">Update User</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 BITSBids. All rights reserved.</p>
+    </footer>
+
+    <script src="User.js"></script>
+</body>
+</html>
